@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AGK HOME | Catálogo</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__logo">AGK</div>
+        <div class="brand__text">
+          <strong>AGK HOME</strong>
+          <span>Catálogo</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#produtos">Produtos</a>
+        <a href="#categorias">Categorias</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div>
+          <h1>Seu catálogo online, simples e profissional.</h1>
+          <p>Veja os produtos, filtre por categoria e peça no WhatsApp.</p>
+
+          <div class="hero__actions">
+            <a class="btn" href="#produtos">Ver produtos</a>
+            <a class="btn btn--ghost" target="_blank"
+              href="https://www.instagram.com/agk_home_brasil/">
+              Instagram @agk_home_brasil
+            </a>
+          </div>
+
+          <div class="search">
+            <input id="searchInput" type="search" placeholder="Buscar: panela, frigideira, ferro fundido..." />
+            <select id="categorySelect">
+              <option value="all">Todas as categorias</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="hero__card">
+          <div class="hero__badge">Atendimento rápido</div>
+          <h3>Peça pelo WhatsApp</h3>
+          <p>Envie o código do produto e a quantidade.</p>
+          <a class="btn btn--whats"
+   href="https://api.whatsapp.com/send?phone=5511989185874&text=Ol%C3%A1!%20Vim%20pelo%20cat%C3%A1logo%20da%20AGK%20HOME%20e%20quero%20fazer%20um%20pedido."
+   target="_blank" rel="noopener">
+   Chamar no WhatsApp
+</a>
+
+          <small class="muted">*Você pode trocar o número no app.js</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="categorias" class="section">
+      <div class="container">
+        <h2>Categorias</h2>
+        <div id="chips" class="chips"></div>
+      </div>
+    </section>
+
+    <section id="produtos" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Produtos</h2>
+          <span id="count" class="muted"></span>
+        </div>
+        <div id="grid" class="grid"></div>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <div class="container contact">
+        <h2>Contato</h2>
+        <p class="muted">Quer fechar pedido ou tirar dúvida? Chama no WhatsApp ou no Instagram.</p>
+
+        <div class="contact__cards">
+          <a id="whatsFooter" class="card" target="_blank" href="#">
+            <strong>WhatsApp</strong>
+            <span class="muted">Atendimento e pedidos</span>
+          </a>
+          <a class="card" target="_blank" href="https://www.instagram.com/agk_home_brasil/">
+            <strong>Instagram</strong>
+            <span class="muted">@agk_home_brasil</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="muted">© <span id="year"></span> AGK HOME</span>
+      <span class="muted">Catálogo online</span>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal__overlay" id="modalClose"></div>
+    <div class="modal__content" role="dialog" aria-modal="true">
+      <button class="modal__x" id="modalX" aria-label="Fechar">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
